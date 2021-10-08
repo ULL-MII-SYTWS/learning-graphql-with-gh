@@ -1,0 +1,1 @@
+gh api graphql --paginate -F query=@gh-api-example.graphql $@
