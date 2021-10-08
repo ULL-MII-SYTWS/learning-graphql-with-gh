@@ -1,5 +1,5 @@
 mutation AddReactionToIssue {
-  addReaction(input:{subjectId:"I_kwDOGLyMF84838wt",content:ROCKET}) {
+  addReaction(input:{subjectId:"I_kwDOGLyMF84838wt",content:HEART}) {
     reaction {
       content
     }

@@ -1,6 +1,6 @@
-query FindIssueID {
+query FindIssueID($num: Int!) {
   repository(owner:"crguezl", name:"learning-graphql-with-gh") {
-    issue(number:2) {
+    issue(number:$num) {
       id
     }
   }
