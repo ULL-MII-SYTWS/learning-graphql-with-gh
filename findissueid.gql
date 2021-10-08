@@ -1,0 +1,7 @@
+query FindIssueID {
+  repository(owner:"crguezl", name:"learning-graphql-with-gh") {
+    issue(number:2) {
+      id
+    }
+  }
+}

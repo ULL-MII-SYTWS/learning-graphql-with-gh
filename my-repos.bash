@@ -1,0 +1,1 @@
+gh api graphql --paginate -F number_of_repos=3 --field query=@my-repos.gql

@@ -1,0 +1,10 @@
+mutation AddReactionToIssue {
+  addReaction(input:{subjectId:"I_kwDOGLyMF84838wt",content:ROCKET}) {
+    reaction {
+      content
+    }
+    subject {
+      id
+    }
+  }
+}
