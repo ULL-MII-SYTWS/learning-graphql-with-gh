@@ -1,0 +1,1 @@
+gh api graphql --paginate --field query=@org-num-repos.gql --jq .data.organization.repositories.totalCount
