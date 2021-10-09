@@ -1,0 +1,10 @@
+mutation AddReactionToIssue($issueId: String!, $emoji: ReactionContent!) {
+  addReaction(input:{subjectId:$issueId,content:$emoji}) {
+    reaction {
+      content
+    }
+    subject {
+      id
+    }
+  }
+}
