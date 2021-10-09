@@ -1,7 +1,0 @@
-query {
-  organization(login: "ULL-MII-SYTWS-2122") {
-    repositories {
-      totalCount
-    }
-  }
-}

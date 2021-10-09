@@ -1,5 +1,7 @@
 query {
-  repository(owner:"ULL-MII-SYTWS-2021", name:"p01-t1-iaas-alu0101040882") {
+  repository(
+    owner:"ULL-MII-SYTWS-2021", 
+    name:"p01-t1-iaas-alu0101040882") {
     issues(last:2, states:OPEN) {
       edges {
         node {
