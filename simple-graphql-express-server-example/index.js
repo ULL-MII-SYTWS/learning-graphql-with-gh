@@ -11,7 +11,7 @@ const AluSchema = buildSchema(`
   type Student {
       AluXXXX: String!
       Nombre: String!
-      markdown: String!
+      markdown: String
   }
 
   type Query {
@@ -43,6 +43,21 @@ async function main () {
             });
             // console.log(result)
             return result
+        },
+        addStudent: ({AluXXXX, Nombre}) => { 
+            console.log(AluXXXX, Nombre)
+            let result = classroom.find(s => {
+                // console.log(`Processing ${insp(s, {depth:null})}`);
+                return s["AluXXXX"] == AluXXXX
+            });
+            if (!result) {
+                let alu = {AluXXXX : AluXXXX, Nombre: Nombre}
+                console.log("Not found! Inserting ")
+
+                classroom.push(alu)
+                return alu    
+            }
+            return result;
         }
     }
       
