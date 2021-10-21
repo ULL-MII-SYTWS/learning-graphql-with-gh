@@ -1,0 +1,42 @@
+query GetScheme {
+  __schema {
+    queryType {
+      name
+      kind
+    }
+  }
+}
+
+query Estudiantes {
+  students {
+    Nombre
+    AluXXXX
+    markdown
+  }
+}
+
+query Estudiante($alu: String!) {
+    student(AluXXXX: $alu) {
+        Nombre
+        markdown
+    }
+}
+
+query StudentType {
+  __type(name: "Student") {
+    name
+    fields {
+      name
+      type {
+        name
+        description
+      } 
+    }
+  }
+}
+
+===== variables ======
+
+{
+  "alu": "alu0101523644"
+}
