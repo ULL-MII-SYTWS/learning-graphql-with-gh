@@ -1,0 +1,12 @@
+ # default value for the branch variable set to "main"
+ query numberOfCommits($org: String!, $repo: String!, $branch: String = "main") {
+    repository(owner: $org, name: $repo) {
+      object(expression: $branch) {
+        ... on Commit {
+          history {
+            totalCount
+          }
+        }
+      }
+    }
+}
