@@ -15,6 +15,22 @@ query Estudiantes {
   }
 }
 
+mutation CreaEstudiante($teacher: String!) {
+  addStudent(AluXXXX: $teacher, Nombre: "Casiano") {
+    AluXXXX
+    Nombre
+  }   
+}
+
+
+mutation ponNota($alu: String!, $nota: String!) {
+  setMarkdown(AluXXXX: $alu, markdown: $nota) {
+    AluXXXX
+    Nombre
+    markdown
+  }   
+}
+
 query Estudiante($alu: String!) {
     student(AluXXXX: $alu) {
         Nombre
@@ -34,11 +50,12 @@ query StudentType {
     }
   }
 }
-
 ===== variables ======
 
 {
-  "alu": "alu0101523644"
+  "alu": "alu0101523644",
+   "teacher": "crguezl",
+  "nota": "NO APTO"
 }
 
 

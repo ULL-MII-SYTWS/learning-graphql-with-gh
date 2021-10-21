@@ -5,7 +5,10 @@ const { graphqlHTTP } = require("express-graphql")
 const { buildSchema } = require("graphql")
 const port = process.argv[2] || 4006;
 
-const data = String(fs.readFileSync(process.argv[3] || 'DMSI-2122.csv'))
+const csvFilePath = process.argv[3] || 'DMSI-2122.csv'
+const data = String(fs.readFileSync(csvFilePath))
+
+const csv=require('csvtojson')
 
 const AluSchema = buildSchema(`
   type Student {
@@ -21,13 +24,11 @@ const AluSchema = buildSchema(`
 
   type Mutation {
       addStudent(AluXXXX: String!, Nombre: String!): Student
+      setMarkdown(AluXXXX: String!, markdown: String!): Student
   }
 `)
 
-
 const app = express()
-const csvFilePath='DMSI-2122.csv'
-const csv=require('csvtojson')
 
 async function main () {
     let classroom=await csv().fromFile(csvFilePath);
@@ -38,10 +39,8 @@ async function main () {
         student: (aluId) => {
             //console.log(aluId)
             let result = classroom.find(s => {
-                // console.log(`Processing ${insp(s, {depth:null})}`);
                 return s["AluXXXX"] == aluId.AluXXXX
             });
-            // console.log(result)
             return result
         },
         addStudent: ({AluXXXX, Nombre}) => { 
@@ -58,6 +57,11 @@ async function main () {
                 return alu    
             }
             return result;
+        },
+        setMarkdown: ({AluXXXX, markdown}) => {
+            let result = classroom.findIndex(s => s["AluXXXX"] === AluXXXX);
+            classroom[result].markdown = markdown
+            return classroom[result]
         }
     }
       
