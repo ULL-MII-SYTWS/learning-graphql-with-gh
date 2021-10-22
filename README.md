@@ -10,6 +10,11 @@ You can run queries on real GitHub data using the GraphQL Explorer, an integrate
 * Youtube video [GraphQL Tutorial. Nos montamos una API con Nodejs y Express](https://youtu.be/atRadu-DKCE)
 
 
+# graphql-github-example
+
+* [Query Github Topics using Github GraphQL API in 3 mins! - Dabble Lab 304. Youtube video](https://youtu.be/YxgNZgOKBzQ)
+
+
 ## References
 
 * <https://ull-mii-sytws.github.io/tema1-introduccion/gh.html>
