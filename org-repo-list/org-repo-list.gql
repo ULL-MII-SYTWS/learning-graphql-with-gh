@@ -1,0 +1,12 @@
+query myOrgRepos($queryString: String!) {
+  search(query: $queryString, type: REPOSITORY, first: 2, after: 20) {
+    repositoryCount
+    edges {
+      node {
+        ... on Repository {
+          name
+        }
+      }
+    }
+  }
+}

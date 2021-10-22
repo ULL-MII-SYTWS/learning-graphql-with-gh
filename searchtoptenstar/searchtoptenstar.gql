@@ -1,0 +1,20 @@
+query SearchMostTop10Star($queryString: String!) {
+  search(query: $queryString, type: REPOSITORY, first: 4) {
+    repositoryCount
+    edges {
+      node {
+        ... on Repository {
+          name
+          descriptionHTML
+          stargazers {
+            totalCount
+          }
+          forks {
+            totalCount
+          }
+          updatedAt
+        }
+      }
+    }
+  }
+}
