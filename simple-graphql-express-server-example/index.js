@@ -18,6 +18,9 @@ const AluSchema = buildSchema(`
   type Student {
       AluXXXX: String!
       Nombre: String!
+      """
+      marks for the lab "markdown" "APTO", "NO APTO", etc.
+      """
       markdown: String
   }
 
