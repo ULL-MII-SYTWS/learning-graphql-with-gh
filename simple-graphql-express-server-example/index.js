@@ -11,6 +11,10 @@ const data = String(fs.readFileSync(csvFilePath))
 const csv=require('csvtojson')
 
 const AluSchema = buildSchema(`
+  """
+  A student. Field AluXXX is the ULL Id, the name and 
+  then as many fields as labs are in the subject 
+  """
   type Student {
       AluXXXX: String!
       Nombre: String!
@@ -18,6 +22,9 @@ const AluSchema = buildSchema(`
   }
 
   type Query {
+      """
+      To get all students
+      """
       students: [ Student ]
       student(AluXXXX: String!): Student
   }
@@ -25,7 +32,9 @@ const AluSchema = buildSchema(`
   type Mutation {
       addStudent(AluXXXX: String!, Nombre: String!): Student
 
-      # Set the mark for the lab "learn Markdown"
+      """
+      To modify the mark for the lab "learn Markdown"
+      """
       setMarkdown(AluXXXX: String!, markdown: String!): Student
   }
 `)
