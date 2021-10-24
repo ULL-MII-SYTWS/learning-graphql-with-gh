@@ -50,10 +50,9 @@ async function main () {
 
     const root = {
         students: () => classroom,
-        student: (aluId) => {
-            //console.log(aluId)
+        student: ({AluXXXX}) => {
             let result = classroom.find(s => {
-                return s["AluXXXX"] == aluId.AluXXXX
+                return s["AluXXXX"] == AluXXXX
             });
             return result
         },
