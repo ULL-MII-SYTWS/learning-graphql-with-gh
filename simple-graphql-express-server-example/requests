@@ -69,50 +69,10 @@ query StudentType {
   }
 }
 
-===== variables ======
-
-{
-  "alu": "alu0101523644",
-   "teacher": "crguezl",
-  "nota": "NO APTO"
-}
-
-
-
-
-query GetScheme {
-  __schema {
-    queryType {
-      name
-      kind
-    }
-  }
-}
-
-query Estudiantes {
-  students {
-    Nombre
-    AluXXXX
-    markdown
-  }
-}
-
-query Estudiante($alu: String!) {
-    student(AluXXXX: $alu) {
-        Nombre
-        markdown
-    }
-}
-
-query StudentType {
-  __type(name: "Student") {
-    name
-    fields {
-      name
-      type {
-        name
-        description
-      } 
-    }
-  }
-}
+# Variables
+# {
+#   "alu": "alu010059230",
+#   "teacher": "crguezl",
+#   "nota": "NO APTO",
+#   "myId": "alu0101523644"
+# }
