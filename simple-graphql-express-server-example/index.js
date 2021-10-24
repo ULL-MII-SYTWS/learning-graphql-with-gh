@@ -24,6 +24,8 @@ const AluSchema = buildSchema(`
 
   type Mutation {
       addStudent(AluXXXX: String!, Nombre: String!): Student
+
+      # Set the mark for the lab "learn Markdown"
       setMarkdown(AluXXXX: String!, markdown: String!): Student
   }
 `)
@@ -59,7 +61,12 @@ async function main () {
             return result;
         },
         setMarkdown: ({AluXXXX, markdown}) => {
-            let result = classroom.findIndex(s => s["AluXXXX"] === AluXXXX);
+            let result = classroom.findIndex(s => s["AluXXXX"] === AluXXXX)
+            if (result === -1) {
+              let message = `${AluXXXX} not found!`
+              console.log(message);
+              return null;
+            } 
             classroom[result].markdown = markdown
             return classroom[result]
         }
