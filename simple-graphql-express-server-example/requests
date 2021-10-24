@@ -70,9 +70,9 @@ query StudentType {
 }
 
 # Variables
-# {
-#   "alu": "alu010059230",
-#   "teacher": "crguezl",
-#   "nota": "NO APTO",
-#   "myId": "alu0101523644"
-# }
+ {
+   "alu": "alu010059230",
+   "teacher": "crguezl",
+   "nota": "NO APTO",
+   "myId": "alu0101523644"
+ }

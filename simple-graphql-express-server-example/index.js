@@ -7,6 +7,7 @@ const port = process.argv[2] || 4006;
 
 const csvFilePath = process.argv[3] || 'DMSI-2122.csv'
 const data = String(fs.readFileSync(csvFilePath))
+//console.log(data);
 
 const csv=require('csvtojson')
 
@@ -46,6 +47,7 @@ const app = express()
 
 async function main () {
     let classroom=await csv().fromFile(csvFilePath);
+    // console.log(typeof classroom);
     fs.writeFileSync('DMSI-2122.json',JSON.stringify(classroom, false, 2))
 
     const root = {
