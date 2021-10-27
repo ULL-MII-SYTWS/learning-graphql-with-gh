@@ -69,7 +69,7 @@ query StudentType {
   }
 }
 
-# Variables
+ Variables
  {
    "alu": "alu010059230",
    "teacher": "crguezl",

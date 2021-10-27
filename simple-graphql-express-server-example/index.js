@@ -10,38 +10,10 @@ const data = String(fs.readFileSync(csvFilePath))
 //console.log(data);
 
 const csv=require('csvtojson')
-
-const AluSchema = buildSchema(`
-  """
-  A student. Field AluXXX is the ULL Id, the name and 
-  then as many fields as labs are in the subject 
-  """
-  type Student {
-      AluXXXX: String!
-      Nombre: String!
-      """
-      marks for the lab "markdown" "APTO", "NO APTO", etc.
-      """
-      markdown: String
-  }
-
-  type Query {
-      """
-      To get all students
-      """
-      students: [ Student ]
-      student(AluXXXX: String!): Student
-  }
-
-  type Mutation {
-      addStudent(AluXXXX: String!, Nombre: String!): Student
-
-      """
-      To modify the mark for the lab "learn Markdown"
-      """
-      setMarkdown(AluXXXX: String!, markdown: String!): Student
-  }
-`)
+const SchemaStr = String(fs.readFileSync('aluschema.gql', {encoding: "utf8"}))
+//console.log(SchemaStr)
+debugger;
+const AluSchema = buildSchema(SchemaStr)
 
 const app = express()
 
