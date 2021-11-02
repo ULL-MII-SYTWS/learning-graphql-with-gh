@@ -24,6 +24,28 @@ async function main () {
     // console.log(typeof classroom);
     fs.writeFileSync('DMSI-2122.json',JSON.stringify(classroom, false, 2))
 
+    function restServer() {
+        app.get('/student', function(req, res) {
+            res.send(classroom)
+        })
+    
+          app.get('/student/:id', function(req, res) {
+            res.send(classroom[req.params.id])
+          })
+    
+          app.get('/search/:name', function(req, res) {
+              //console.log(req.params.name)
+            let index = classroom.findIndex(s => {
+                //console.log(s.Nombre)
+                let r = s["Nombre"].toLowerCase().match(req.params.name.toLowerCase())
+                //console.log(r)
+                return r
+            });
+            (index !== -1)? 
+              res.send(classroom[index]) : `{ message: "not found"}`
+          })
+    }
+    
     const root = {
         students: () => classroom,
         student: ({AluXXXX}) => {
@@ -32,19 +54,24 @@ async function main () {
             });
             return result
         },
-        addStudent: (args, context, info) => {
-            console.log("======== args ========")
-            console.log(ins(args));
-            
-            console.log("======== context ========")
-            console.log(ins(args, 1));
-            
-            console.log("======== info ========")
-            console.log(typeof context);          
-          
-            const {AluXXXX, Nombre} = args; 
+        /* This console.log proves that parent argument is skipped by express-graphql server */
+        addStudent: (object, args, context, info) => {
+            console.log("======== parent is args =========")
+            console.log(ins(object))
 
-            let result = classroom.find(s => {
+            console.log("======== args is context ========")
+            console.log(ins(args.classroom));
+            console.log(`accesing req object from the context: req.baseUrl=${args.req.baseUrl}!`)
+            
+            console.log("======== context is info ========")
+            console.log(ins(context, 1));
+            
+            console.log("======== info is undefined ========")
+            console.log(info);          
+          
+            const {AluXXXX, Nombre} = object; 
+
+            let result = args.classroom.find(s => {
                 // console.log(`Processing ${insp(s, {depth:null})}`);
                 return s["AluXXXX"] == AluXXXX
             });
@@ -71,16 +98,20 @@ async function main () {
       
     app.use(
         '/graphql',
-        graphqlHTTP({
+        graphqlHTTP((request, response, next) => ({
           schema: AluSchema,
           rootValue: root,
           graphiql: true,
-        }),
+          context: { classroom: classroom, req: request, res: response }
+        })),
       );
       
+      restServer();
       app.listen(port);
       console.log("Running at port "+port+`. Visit http://localhost:${port}/graphql`)
-}
+    }
+
+
 
 main();
 

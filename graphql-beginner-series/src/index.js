@@ -11,7 +11,7 @@ const {
 const typeDefs = gql`
 
   type Query {
-      hello: String!
+      hello(name: String): String!
   }
 
   type User {
@@ -43,7 +43,10 @@ const typeDefs = gql`
 
 const resolvers = {
     Query: {
-        hello: () => "hello world!"
+        hello: (parent, {name}) => {
+            console.log(name)
+            return `hello ${name || "world"}!`
+        }
     },
     Mutation: {
         login: (parent, args, context, info) => {
