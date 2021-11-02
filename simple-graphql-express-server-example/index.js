@@ -1,5 +1,7 @@
 const fs = require("fs")
-const insp = require("util").inspect;
+const util = require("util")
+const ins = (e, d=2) => util.inspect(e, {depth: d})
+
 const express = require("express")
 const { graphqlHTTP } = require("express-graphql")
 const { buildSchema } = require("graphql")
@@ -30,8 +32,17 @@ async function main () {
             });
             return result
         },
-        addStudent: (obj, args, context, info) => {
-            const {AluXXXX, Nombre} = obj; 
+        addStudent: (args, context, info) => {
+            console.log("======== args ========")
+            console.log(ins(args));
+            
+            console.log("======== context ========")
+            console.log(ins(args, 1));
+            
+            console.log("======== info ========")
+            console.log(typeof context);          
+          
+            const {AluXXXX, Nombre} = args; 
 
             let result = classroom.find(s => {
                 // console.log(`Processing ${insp(s, {depth:null})}`);
@@ -68,7 +79,7 @@ async function main () {
       );
       
       app.listen(port);
-      console.log("Running at port "+port)
+      console.log("Running at port "+port+`. Visit http://localhost:${port}/graphql`)
 }
 
 main();
