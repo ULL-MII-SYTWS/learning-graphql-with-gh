@@ -54,7 +54,7 @@ async function main () {
             });
             return result
         },
-        /* This console.log proves that parent argument is skipped by express-graphql server */
+        /* This console.log proves that parent argument is skipped. See README.md */
         addStudent: (object, args, context, info) => {
             console.log("======== parent is args =========")
             console.log(ins(object))
@@ -67,7 +67,10 @@ async function main () {
             console.log(ins(context, 1));
             
             console.log("======== info is undefined ========")
-            console.log(info);          
+            console.log(info); 
+            
+            console.log("============= this is the parent ==============")
+            console.log(this)
           
             const {AluXXXX, Nombre} = object; 
 
