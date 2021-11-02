@@ -24,6 +24,9 @@
   },
   "dependencies": {
     "express": "^4.1.1",
+    "graphql-tools": "^8.2.0",
+    "lodash": "^4.17.21",
+    "subscriptions-transport-ws": "^0.9.19",
     "ws": "^8.2.3"
   }
 }
