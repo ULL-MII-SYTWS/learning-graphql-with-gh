@@ -83,4 +83,4 @@ const Server = new ApolloServer({
     ]
 })
 
-Server.listen().then(({url}) => console.log(`Server listening at ${url}`))
+Server.listen({ port: process.argv[2] || '4000'}).then(({url}) => console.log(`Server listening at ${url}`))

@@ -1,8 +1,8 @@
 
-## GraphQL Hello World
+## GraphQL "Hello World"
 
 Learn how to do hello world for GraphQL in Node.js.
 
-[GraphQL Hello World](https://youtu.be/DyvsMKsEsyE) Ben Awad
+Youtube video [GraphQL Hello World](https://youtu.be/DyvsMKsEsyE)  y Ben Awad
 
-<https://github.com/benawad/graphql-beginner-series/tree/0_hello_world/src>
+See also the repo <https://github.com/benawad/graphql-beginner-series/tree/0_hello_world/src>
