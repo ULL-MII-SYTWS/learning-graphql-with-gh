@@ -1,0 +1,122 @@
+query getTeams {
+  organization(login: "ULL-MII-SYTWS-2223") {
+    teams(first: 100) {
+      edges {
+        node {
+          name
+          url
+        }
+      }
+    }
+  }
+}
+
+query getCommits {
+  repository(owner: "ULL-MFP-AET-2223", name: "aprender-markdown-ana_marlene-hernandez-alu0100199741") {
+    object(expression: "main") {
+      ... on Commit {
+        history(first: 100, since: "2022-10-20T00:00:01Z", until: "2022-10-20T23:59:59Z") {
+          nodes {
+            id
+            oid
+            messageHeadline
+            message
+            committedDate
+            authoredDate
+            pushedDate
+            author {
+              name
+              email
+              user {
+                login
+              }
+            }
+            history(first: 0) {
+              totalCount
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+query getRuben {
+  repository(owner: "ULL-MFP-AET-2223", name: "aprender-markdown-ruben-coello-lopez-alu0101024400") {
+    object(expression: "main") {
+      ... on Commit {
+        history(first: 100, since: "2022-10-20T00:00:00Z", until: "2022-10-20T23:59:59Z") {
+          nodes {
+            id
+            oid
+            messageHeadline
+            message
+            committedDate
+            authoredDate
+            pushedDate
+            author {
+              name
+              email
+              user {
+                login
+              }
+            }
+            history(first: 0) {
+              totalCount
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+query bug {
+  repository(owner: "ULL-MFP-AET-2223", name: "aprender-markdown-gerardo-rodriguez-caputo-alu0100708974") {
+    object(expression: "main") {
+      ... on Commit {
+        history(first: 100, since: "2022-10-27T00:00:00Z", until: "2022-10-27T23:59:59Z") {
+          nodes {
+            id
+            oid
+            messageHeadline
+            message
+            committedDate
+            authoredDate
+            pushedDate
+            author {
+              name
+              email
+              user {
+                login
+              }
+            }
+            history(first: 0) {
+              totalCount
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+query getRepos($login: String!) {
+      organization(login: $login) {
+        repositories(privacy: PUBLIC, first: 100) {
+          totalCount
+        }
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
