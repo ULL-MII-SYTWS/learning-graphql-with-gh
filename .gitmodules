@@ -1,6 +1,3 @@
 [submodule "simple-graphql-express-server-example"]
 	path = simple-graphql-express-server-example
 	url = https://github.com/crguezl/simple-graphql-express-server-example
-[submodule "graphql-chat-app"]
-	path = graphql-chat-app
-	url = https://github.com/ammezie/graphql-chat-app.git
