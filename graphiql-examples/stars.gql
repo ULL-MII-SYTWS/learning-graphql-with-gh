@@ -1,0 +1,49 @@
+query stars($numRepos: Int) {
+  search(query: "topic:gh-extension sort:stars", type: REPOSITORY, first: $numRepos) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    repositoryCount
+    edges {
+      cursor
+      node {
+        ... on Repository {
+          nameWithOwner
+          description
+          url
+          stargazers {
+            totalCount
+          }
+        }
+      }
+    }
+  }
+}
+
+
+query SearchMostTop10Star($queryString: String!) {
+  search(query: $queryString, type: REPOSITORY, first: 4) {
+    repositoryCount
+    edges {
+      cursor
+      node {
+        ... on Repository {
+          name
+          stargazers {
+            totalCount
+          }
+          forks {
+            totalCount
+          }
+          updatedAt
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
