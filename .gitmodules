@@ -1,6 +1,3 @@
-[submodule "graphql-github-example"]
-	path = express-web-app-graphql-client-showing-gh-extensions
-	url = https://github.com/crguezl/graphql-github-example.git
 [submodule "simple-graphql-express-server-example"]
 	path = simple-graphql-express-server-example
 	url = https://github.com/crguezl/simple-graphql-express-server-example
