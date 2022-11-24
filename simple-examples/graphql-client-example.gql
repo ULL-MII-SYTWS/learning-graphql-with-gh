@@ -1,8 +1,0 @@
-GET https://api.github.com/graphql/
-
-query {
-  organization(login: "nasa") {
-    name
-    url
-  }
-}
