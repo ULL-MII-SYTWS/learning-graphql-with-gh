@@ -1,7 +1,7 @@
 ## Get Discussions in this repo
 
 ```json
-➜  discussions-mutation git:(main) ./with-category.bash        
+➜  discussions-mutation git:(main) ./get-discussions.bash        
 {
   "data": {
     "repository": {
