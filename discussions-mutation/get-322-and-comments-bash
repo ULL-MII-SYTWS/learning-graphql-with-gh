@@ -1,0 +1,27 @@
+# Discussion 322 and comments
+DISCUSSION_NUMBER=1174
+if [ -n "$1"]; then
+  DISCUSSION_NUMBER=$1
+fi
+gh api graphql \
+-H 'GraphQL-Features: discussions_api' \
+-F owner=':owner' \
+-F name=':repo' \
+-f query='query($name: String!, $owner: String!) {
+  repository(owner: $owner, name: $name) {
+    discussion(number: $DISCUSSION_NUMBER){
+      id 
+      title 
+      body 
+      comments(first:1){ 
+        edges{ 
+          node{ 
+            id 
+            body 
+          }
+        }
+      }
+    }
+  }
+}
+'
