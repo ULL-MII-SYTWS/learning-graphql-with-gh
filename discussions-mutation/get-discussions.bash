@@ -1,7 +1,6 @@
 #!/bin/bash 
 # Get discussions 
 gh api graphql \
-  -H 'GraphQL-Features: discussions_api' \
   -F owner=':owner' \
   -F name=':repo' \
   -f query='

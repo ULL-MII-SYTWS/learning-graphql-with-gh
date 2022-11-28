@@ -6,7 +6,6 @@ if [[ $# != 0 ]]; then
   DISCUSSION_NUMBER=$1
 fi
 gh api graphql \
--H 'GraphQL-Features: discussions_api' \
 -F discussionNumber=${DISCUSSION_NUMBER} \
 -F owner=':owner' \
 -F name=':repo' \
