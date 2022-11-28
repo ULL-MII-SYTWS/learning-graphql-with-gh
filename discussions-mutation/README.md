@@ -59,6 +59,22 @@
 }
 ```
 
+## Add Reply to Discussion Comment
+
+```json
+➜  discussions-mutation git:(main) ✗ ./reply-to-discussion-comment.bash
+{
+  "data": {
+    "addDiscussionComment": {
+      "comment": {
+        "body": "Contador de cuerpo: Contador de cuerpo: 3",
+        "id": "DC_kwDOGLyMF84AQN_k"
+      }
+    }
+  }
+}
+```
+
 ## References
 
 * [gist](https://gist.github.com/oleksis/d40a48a343b7e81fe0c6a940f086f43c)
