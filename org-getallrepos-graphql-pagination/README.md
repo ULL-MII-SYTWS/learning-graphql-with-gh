@@ -19,7 +19,7 @@ This is a simple script to get all repo names and branches from an organization 
 
 ## Pagination in GraphQL
 
-> **Note** and more
+> **Warning** and more
 
 > See <https://ull-mii-sytws.github.io/temas/introduccion-a-javascript/github-cli/gh-api-graphql.html#pagination>
 >
