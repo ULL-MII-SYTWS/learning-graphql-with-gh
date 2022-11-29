@@ -17,6 +17,25 @@ This is a simple script to get all repo names and branches from an organization 
 ]
 ```
 
+```graphql
+query($org:String!, $endCursor:String) {
+  organization(login:$org) {
+    repositories(first: 100, after: $endCursor, isFork:false, orderBy: {field:NAME, direction:ASC}) {
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+      nodes {
+        name
+        defaultBranchRef {
+          name
+        }
+      }
+    }
+  }
+}
+```
+
 ## Pagination in GraphQL
 
 > **Warning** and more
