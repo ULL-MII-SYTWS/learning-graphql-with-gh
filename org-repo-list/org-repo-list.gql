@@ -1,5 +1,5 @@
 query myOrgRepos($queryString: String!) {
-  search(query: $queryString, type: REPOSITORY, first: 2, after: 20) {
+  search(query: $queryString, type: REPOSITORY, first: 2) {
     repositoryCount
     edges {
       node {
