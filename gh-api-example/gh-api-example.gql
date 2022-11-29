@@ -1,7 +1,7 @@
-query {
+query($owner: String!, $lab: String!) {
   repository(
-    owner:"ULL-MII-SYTWS-2021", 
-    name:"p01-t1-iaas-alu0101040882") {
+    owner: $owner, 
+    name: $lab) {
     issues(last:2, states:OPEN) {
       edges {
         node {
