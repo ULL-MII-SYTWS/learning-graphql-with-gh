@@ -15,20 +15,13 @@ You can run queries on real GitHub data using the GraphQL Explorer, an integrate
 # graphql-github-example
 
 * [Query Github Topics using Github GraphQL API in 3 mins! - Dabble Lab 304. Youtube video](https://youtu.be/YxgNZgOKBzQ)
-
-Este repo <https://github.com/dabblelab/graphql-github-example.git> le hice un fork en:
-
-https://github.com/crguezl/graphql-github-example.git>
-
-que ha sido un submodulo de este repo hasta noviembre de 2022. La carpeta se llamaba 
-
-`express-web-app-graphql-client-showing-gh-extensions`
+* <https://github.com/dabblelab/graphql-github-example.git> 
+* <https://github.com/crguezl/graphql-github-example.git>
 
 
 ## References
 
 * <https://ull-mii-sytws.github.io/tema1-introduccion/gh.html>
-* <https://ull-mii-sytws.github.io/practicas/06p6-t1-gh-cli.html>
 * <https://ull-mii-sytws.github.io/tema1-introduccion/gh-workflows>
 * <https://www.apollographql.com/blog/graphql/explaining-graphql-connections/>
 * <https://ignaciochiazzo.medium.com/paginating-requests-in-apis-d4883d4c1c4c#:~:text=When%20exposing%20large%20data%20sets,endpoints%2C%20index%20endpoints%2C%20etc.>
