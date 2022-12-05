@@ -32,6 +32,7 @@ let data = await response.text();
 console.log(data);
 ```
 
-```jsbtoa("Hello world 2!. \n<https://docs.github.com/en/rest/repos/contents?apiVersion=2022-11-28>")
+```js
+btoa("Hello world 2!. \n<https://docs.github.com/en/rest/repos/contents?apiVersion=2022-11-28>")
 'SGVsbG8gd29ybGQgMiEuIAo8aHR0cHM6Ly9kb2NzLmdpdGh1Yi5jb20vZW4vcmVzdC9yZXBvcy9jb250ZW50cz9hcGlWZXJzaW9uPTIwMjItMTEtMjg+'
 ```
