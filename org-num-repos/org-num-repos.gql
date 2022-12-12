@@ -2,6 +2,7 @@ query ($organizationname: String!) {
   organization(login: $organizationname) {
     repositories {
       totalCount
+      totalDiskUsage
     }
   }
 }
