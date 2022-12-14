@@ -1,5 +1,9 @@
 mutation renameRepoName($id: ID!, $target: String!) {
-  updateRepository(input: {name: $target, repositoryId: $id}) {
+  updateRepository(
+    input: { 
+       name: $target, 
+       repositoryId: $id
+    }) {
     repository {
       name
     }
