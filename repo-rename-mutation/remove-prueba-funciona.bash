@@ -1,6 +1,6 @@
 REPO=$1
 if [ -z "$REPO" ]; then
-  REPO="ULL-ESIT-DMSI-1920/prueba-funciona"
+  REPO="prueba-funciona"
 fi
-
+REPO="$(gh pwd)/$REPO"
 gh repo delete $REPO --confirm

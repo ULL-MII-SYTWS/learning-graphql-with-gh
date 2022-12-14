@@ -10,4 +10,4 @@ query getRepoId($owner: String!, $lab: String!) {
   }
 }'
 
-gh api graphql -f owner="ULL-ESIT-DMSI-1920" -f lab="$LAB" -F query="$GETID" --jq '.data.repository.id'
+gh api graphql -f owner="$(gh pwd)" -f lab="$LAB" -F query="$GETID" --jq '.data.repository.id'
