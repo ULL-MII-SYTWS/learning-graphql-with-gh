@@ -13,3 +13,7 @@ pwd-lab:        !gh config get current-lab
 cd:     !gh config set current-org "$1" 2>/dev/null
 cd-lab: !gh config set current-lab "$1" 2>/dev/null
 ```
+
+## requirement
+
+install gh extension org-browse-repo
