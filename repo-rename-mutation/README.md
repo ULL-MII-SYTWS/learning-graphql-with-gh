@@ -1,6 +1,6 @@
 See <https://sytws.netlify.app/practicas/gh-cli/#rename-a-repo> for more info.
 
-## Some gh alias used in the examples
+## Some gh alias used in this examples
 
 ```
 repo-rename-mutation git:(main) gh alias list | grep pwd
