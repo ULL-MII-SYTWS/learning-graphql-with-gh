@@ -1,5 +1,5 @@
 #!/bin/bash 
-# Get discussions 
+# Get discussions in this repository
 gh api graphql \
   -F owner=':owner' \
   -F name=':repo' \
