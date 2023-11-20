@@ -4,8 +4,10 @@
 This is a simple script to get all repo names and branches from an organization using the GraphQL API.
 
 
-```json 
+```
 ➜  org-getallrepos-graphql-pagination git:(main) ✗ ./org-getallrepos.sh | jq '[ .[0, 1] ]' -
+```
+```json
 [
   {
     "branch": "main",
