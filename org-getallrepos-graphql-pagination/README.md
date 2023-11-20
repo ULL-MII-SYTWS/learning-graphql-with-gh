@@ -49,6 +49,7 @@ See
 
 * <https://ull-mii-sytws.github.io/temas/introduccion-a-javascript/github-cli/gh-api-graphql.html#pagination>
 * <https://graphql.org/learn/pagination/>
+  * Install the server: <https://github.com/apollographql/starwars-server>
 
 When using the `gh` cli in `--paginate` mode, all pages of results will sequentially be requested until there are no more pages of results. For GraphQL requests, this requires that 
 
