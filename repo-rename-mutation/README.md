@@ -43,3 +43,5 @@ Request saved in Altair GraphQL Client
 
 * [/altair-graphql/github_graphql_examples.agc](/altair-graphql/github_graphql_examples.agc)
 * [/altair-graphql/github_graphql_examples.agc.json](/altair-graphql/github_graphql_examples.agc.json)
+
+Try also the GitHub GraphQL Explorer: <https://docs.github.com/en/graphql/overview/explorer>
