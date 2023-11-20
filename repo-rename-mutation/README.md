@@ -11,7 +11,12 @@ It is analogous to performing HTTP verbs such as `POST`, `PATCH`, and `DELETE`.
 * See SYTWS notes at 
 <https://sytws.netlify.app/practicas/gh-cli/#rename-a-repo> for more info.
 * The GH GraphQL documentation for the mutation `updateRepository`: <https://docs.github.com/en/graphql/reference/mutations#updaterepository>
-* 
+  
+## Examples
+
+- See [rename_repo.sh](rename_repo.sh) for more info.
+- See [rename.gql](rename.gql) for more info.
+
 ## Some gh alias used in this examples
 
 ```
@@ -25,10 +30,6 @@ pwd-lab:        !gh config get current-lab
 cd:     !gh config set current-org "$1" 2>/dev/null
 cd-lab: !gh config set current-lab "$1" 2>/dev/null
 ```
-
-## requirement
-
-install gh extension org-browse-repo
 
 ## Altair GraphQL Client
 
