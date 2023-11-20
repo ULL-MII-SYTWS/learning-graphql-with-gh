@@ -19,11 +19,15 @@ It is analogous to performing HTTP verbs such as `POST`, `PATCH`, and `DELETE`.
 
 ## Some gh alias used in this examples
 
+### gh pwd
+
 ```
 repo-rename-mutation git:(main) gh alias list | grep pwd
 pwd:    !gh config get current-org
 pwd-lab:        !gh config get current-lab
 ```
+
+### gh cd
 
 ```
 ➜  repo-rename-mutation git:(main) gh alias list | grep cd 
