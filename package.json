@@ -4,7 +4,7 @@
   "description": "You can run queries on real GitHub data using the GraphQL Explorer, an integrated development environment in your browser that includes docs, syntax highlighting, and validation errors.",
   "main": "index.js",
   "scripts": {
-    "save": "git ci -am 'save'; git push"
+    "save": "git ci -am 'save'; git push -u origin main; git push -u sytws main"
   },
   "repository": {
     "type": "git",
