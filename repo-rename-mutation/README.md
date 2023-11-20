@@ -1,5 +1,17 @@
-See <https://sytws.netlify.app/practicas/gh-cli/#rename-a-repo> for more info.
+## About mutations
 
+Every GraphQL schema has a root type for both queries and mutations. 
+
+The [mutation type](https://graphql.github.io/graphql-spec/June2018/#sec-Type-System) defines GraphQL operations that change data on the server. 
+
+It is analogous to performing HTTP verbs such as `POST`, `PATCH`, and `DELETE`.
+
+## References
+
+* See SYTWS notes at 
+<https://sytws.netlify.app/practicas/gh-cli/#rename-a-repo> for more info.
+* The GH GraphQL documentation for the mutation `updateRepository`: <https://docs.github.com/en/graphql/reference/mutations#updaterepository>
+* 
 ## Some gh alias used in this examples
 
 ```
