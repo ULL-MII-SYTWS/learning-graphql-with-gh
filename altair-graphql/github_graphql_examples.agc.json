@@ -68,6 +68,30 @@
             "id": "8b2043ef-bc52-4813-9187-66f64566640f",
             "created_at": 1700484298431,
             "updated_at": 1700485573749
+        },
+        {
+            "version": 1,
+            "type": "window",
+            "query": "query getAllRepos($org: String!, $cursor: String) {\n  organization(login: $org) {\n    repositories(\n      after: $cursor,\n      first: 5, \n      orderBy: { field: PUSHED_AT, direction: DESC}) {\n      pageInfo {\n        hasNextPage\n        endCursor\n      }\n      nodes {\n         name\n      }\n    }\n  }\n}",
+            "apiUrl": "https://api.github.com/graphql",
+            "variables": "{\n  \"org\": \"{{SYTWS}}\",\n  \"cursor\": \"Y3Vyc29yOnYyOpK5MjAyMy0xMS0xM1QxNzozNzoxMSswMDowMM4qz2iz\"\n}",
+            "subscriptionUrl": "",
+            "subscriptionConnectionParams": "{}",
+            "headers": [
+                {
+                    "key": "",
+                    "value": "",
+                    "enabled": true
+                }
+            ],
+            "windowName": "getAllRepos",
+            "preRequestScript": "",
+            "preRequestScriptEnabled": false,
+            "postRequestScript": "",
+            "postRequestScriptEnabled": false,
+            "id": "2f4e3739-8e6a-42e3-922e-a30c0fee3664",
+            "created_at": 1700489124941,
+            "updated_at": 1700489124941
         }
     ],
     "preRequest": {

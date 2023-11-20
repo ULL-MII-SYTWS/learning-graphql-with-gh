@@ -1,5 +1,6 @@
 ## Get all Repos
 
+
 This is a simple script to get all repo names and branches from an organization using the GraphQL API.
 
 
@@ -16,6 +17,12 @@ This is a simple script to get all repo names and branches from an organization 
   }
 ]
 ```
+
+See [org-getallrepos.sh](org-getallrepos.sh) for more info.
+
+### File `org-getallrepos.gql`
+
+Here are the contents of the file [org-getallrepos.gql](org-getallrepos.gql):
 
 ```graphql
 query($org:String!, $endCursor:String) {
@@ -36,16 +43,17 @@ query($org:String!, $endCursor:String) {
 }
 ```
 
-## Pagination in GraphQL
+See <https://ull-mii-sytws.github.io/temas/introduccion-a-javascript/github-cli/gh-api-graphql.html#pagination>
 
-> **Warning** and more
+When using the `gh` cli in `--paginate` mode, all pages of results will sequentially be requested until there are no more pages of results. For GraphQL requests, this requires that 
 
-> See <https://ull-mii-sytws.github.io/temas/introduccion-a-javascript/github-cli/gh-api-graphql.html#pagination>
->
-> In `--paginate` mode, all pages of results will sequentially be requested until there are no more pages of results. 
->
-> For GraphQL requests, this requires that 
->
-> 1. the original query accepts an `$endCursor: String` variable and that 
-> 2. it fetches the `pageInfo{ hasNextPage, endCursor }` set of fields from a collection.
+1. The original query accepts an `$endCursor: String` variable and that 
+2. It fetches the `pageInfo{ hasNextPage, endCursor }` set of fields from a collection.
 
+## Altair GraphQL Client
+
+Request saved in Altair GraphQL Client
+
+![REPO RENAME Altair GraphQL Client](/images/altair-allrepos.png)
+* [/altair-graphql/github_graphql_examples.agc](/altair-graphql/github_graphql_examples.agc)
+* [/altair-graphql/github_graphql_examples.agc.json](/altair-graphql/github_graphql_examples.agc.json)

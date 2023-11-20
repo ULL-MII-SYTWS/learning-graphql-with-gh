@@ -40,5 +40,6 @@ cd-lab: !gh config set current-lab "$1" 2>/dev/null
 Request saved in Altair GraphQL Client
 
 ![REPO RENAME Altair GraphQL Client](/images/altair-mutation.png)
-* [github_graphql_examples.agc](github_graphql_examples.agc)
-* [github_graphql_examples.agc.json](github_graphql_examples.agc.json)
+
+* [/altair-graphql/github_graphql_examples.agc](/altair-graphql/github_graphql_examples.agc)
+* [/altair-graphql/github_graphql_examples.agc.json](/altair-graphql/github_graphql_examples.agc.json)
