@@ -17,3 +17,10 @@ cd-lab: !gh config set current-lab "$1" 2>/dev/null
 ## requirement
 
 install gh extension org-browse-repo
+
+## Altair GraphQL Client
+
+Request saved in Altair GraphQL Client
+
+* [github_graphql_examples.agc](github_graphql_examples.agc)
+* [github_graphql_examples.agc.json](github_graphql_examples.agc.json)
